@@ -3,6 +3,280 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  /* Fundo verde escuro camuflado com padrão sutil */
+body {
+  background-color: #1a2a1a; /* verde escuro bem fechado */
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(34, 50, 34, 0.4) 10%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(28, 42, 28, 0.3) 15%, transparent 50%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #c3d1c3; /* verde cinza claro para texto */
+}
+
+/* Cabeçalho com texto vermelho desbotado e sombra LED suave */
+.led-header h1, .led-header p {
+    display: flex;
+  color: #b34a4a; /* vermelho suave */
+  text-shadow: 0 0 8px #b34a4a;
+  justify-content: center;
+  margin: 0.2em 0;
+}
+
+/* Botão CTA com vermelho suave */
+.cta-button {
+  padding: 15px 30px;
+  background-color: #b34a4a;
+  color: #e6e6e6;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #8a3838;
+  border: 2px solid #8a3838;
+  cursor: pointer;
+  font-size: 1rem;
+  user-select: none;
+  text-align: center;
+}
+
+/* Hover suave no botão */
+.cta-button:hover {
+  background-color: #8a3838;
+  box-shadow: 0 0 15px #b34a4a, 0 0 25px #b34a4a;
+  border-color: #b34a4a;
+}
+
+/* Efeito LED pisca suave para botões com classe led */
+.cta-button.led {
+  animation: ledPulse 1.5s infinite alternate;
+}
+
+/* Animação LED suave */
+@keyframes ledPulse {
+  from {
+    box-shadow: 0 0 10px #b34a4a, 0 0 20px #b34a4a;
+  }
+  to {
+    box-shadow: 0 0 20px #b34a4a, 0 0 30px #b34a4a;
+  }
+}
+
+/* Seções padding e alinhamento */
+section {
+  padding: 80px 20px;
+  max-width: 80%;
+  margin: 0 auto;
+  background: rgba(26, 42, 26, 0.85); /* fundo verde escuro translúcido */
+  border-radius: 12px;
+  box-shadow: 0 0 15px #375937;
+  margin-bottom: 30px;
+}
+
+/* Títulos das seções em verde claro */
+section h2 {
+  color: #8fb28f;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px #8fb28f;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+/* Cards de benefícios */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(18, 28, 18, 0.9);
+  color: #a3bba3;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 280px;
+  box-shadow: 0 0 10px #4a754a;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Profissional destaque */
+.prof-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px;
+}
+
+.profile-img {
+  max-width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #6a996a;
+}
+
+.prof-text h2 {
+  color: #b34a4a;
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+}
+
+.prof-text p {
+  color: #d9e6d9;
+  font-style: italic;
+  font-size: 1.1rem;
+  max-width: 520px;
+}
+
+/* Comentários */
+.comentarios blockquote {
+  background: rgba(34, 55, 34, 0.8);
+  border-left: 6px solid #8fb28f;
+  margin: 20px auto;
+  padding: 20px 25px;
+  color: #cfe5cf;
+  font-style: italic;
+  font-size: 1.1rem;
+  max-width: 700px;
+  box-shadow: 0 0 10px #4a754a;
+}
+
+.comentarios blockquote footer {
+  margin-top: 10px;
+  font-weight: 700;
+  color: #a3bba3;
+  text-align: right;
+}
+
+/* Suporte */
+.suporte p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #c3d1c3;
+  margin-bottom: 20px;
+}
+
+/* Formulário de registro */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+form label {
+  margin-top: 15px;
+  margin-bottom: 6px;
+  color: #9bb89b;
+  font-weight: 600;
+}
+
+form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1.5px solid #4a754a;
+  background: #1a2a1a;
+  color: #d9e6d9;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #8fb28f;
+  box-shadow: 0 0 6px #8fb28f;
+}
+
+/* Botão dentro do form */
+form button.cta-button {
+  margin-top: 25px;
+  align-self: center;
+  font-size: 1.1rem;
+}
+
+/* Avaliações */
+.avaliacoes .review {
+  background: rgba(26, 42, 26, 0.85);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px auto;
+  max-width: 700px;
+  box-shadow: 0 0 12px #4a754a;
+  color: #b0d0b0;
+  font-style: italic;
+}
+
+.avaliacoes .review strong {
+  display: block;
+  margin-top: 10px;
+  color: #8fb28f;
+  font-weight: 700;
+  font-style: normal;
+  text-align: right;
+}
+
+/* Rodapé */
+footer {
+  background-color: #111a11;
+  color: #6b8e6b;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 10px #4a754a inset;
+}
+
+/* Links dentro do site */
+a {
+  color: #b34a4a;
+  text-decoration: none;
+  align-self: center;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #8a3838;
+}
+
+/* Centraliza texto e botões horizontalmente e verticalmente */
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.cta-container p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Responsividade básica */
+@media (max-width: 700px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .prof-container {
+    flex-direction: column;
+  }
+  
+  .profile-img {
+    max-width: 80%;
+  }
+}
+
+</style>
   <title>Mercenário de Sucesso</title>
 
   <!-- Fonte estilo "tech" -->
@@ -114,6 +388,62 @@
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="/scripts.js"></script>
+ 
+  <script>
+    AOS.init();
+
+// Rolagem suave para todos os links internos
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(anchor.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Efeito LED piscante suave no botão CTA
+const ctaButton = document.querySelector('.cta-button');
+setInterval(() => {
+  ctaButton.classList.toggle('led');
+}, 1500); // sincronizado com a animação CSS (1.5s)
+
+// Contagem regressiva
+const targetDate = new Date();
+targetDate.setDate(targetDate.getDate() + 7);
+
+const countdown = document.createElement('div');
+countdown.id = 'countdown';
+document.querySelector('.led-header').appendChild(countdown);
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
+  if (distance < 0) {
+    countdown.innerHTML = "<p style='color:#8fb28f; text-shadow: 0 0 5px #8fb28f;'>Missão iniciada!</p>";
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((distance / 1000 / 60) % 60);
+  const seconds = Math.floor((distance / 1000) % 60);
+
+  countdown.innerHTML = `
+    <p style="color:#8fb28f; text-shadow: 0 0 5px #8fb28f;">
+      Próxima missão em:
+      <span>${days}d</span>
+      <span>${hours}h</span>
+      <span>${minutes}m</span>
+      <span>${seconds}s</span>
+    </p>
+  `;
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown(); // inicializa imediatamente
+
+  </script>
 </body>
 </html>
