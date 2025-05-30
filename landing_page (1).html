@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mercenário de Sucesso</title>
+
+  <!-- Fonte estilo "tech" -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  
+  <!-- Biblioteca para animação ao scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Cabeçalho com efeito LED -->
+  <header class="led-header">
+    <h1>TORNE-SE UM MERCENÁRIO DE SUCESSO</h1>
+    <p>Missões, disciplina, honra e dinheiro. Tudo começa aqui.</p>
+    <a href="#venda" class="cta-button led">COMPRAR AGORA</a> <!-- Botão de venda destacado -->
+  </header>
+
+  <!-- Seção de benefícios -->
+  <section class="beneficios" id="beneficios">
+    <h2>BENEFÍCIOS EXCLUSIVOS</h2>
+    <div class="cards">
+      <div class="card" data-aos="fade-up">Treinamentos Táticos Avançados</div>
+      <div class="card" data-aos="fade-up" data-aos-delay="100">Acesso às Melhores Missões Internacionais</div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200">Salários Altíssimos por Operação</div>
+      <div class="card" data-aos="fade-up" data-aos-delay="300">Rede de Contatos Global</div>
+    </div>
+  </section>
+
+  <!-- Seção do profissional em destaque -->
+  <section class="profissional" id="abel">
+    <div class="prof-container">
+      <img src="/eu.jpg" alt="Profissional Abel" class="profile-img" />
+      <div class="prof-text" data-aos="fade-left">
+        <h2>Profissional Abel</h2>
+        <p>
+          "Ser mercenário não é apenas sobre lutar, é sobre estratégia, respeito e reputação.
+          Eu já estive em todas as partes do mundo. O verdadeiro sucesso está em saber quando agir."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de comentários dos usuários -->
+  <section class="comentarios" id="comentarios">
+    <h2>Comentários dos Mercenários</h2>
+    <div class="comments-list" data-aos="fade-up">
+      <blockquote>
+        <p>"Treinamento de altíssimo nível. Aprendi tudo que precisava para as missões reais."</p>
+        <footer>– Lucas M., Mercenário Profissional</footer>
+      </blockquote>
+      <blockquote>
+        <p>"O suporte foi essencial para minha evolução. Recomendo a todos que querem entrar para o time."</p>
+        <footer>– Ana P., Operadora Tática</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Seção de suporte -->
+  <section class="suporte" id="suporte">
+    <h2>Suporte ao Mercenário</h2>
+    <p>Precisa de ajuda? Nossa equipe está disponível 24/7 para resolver suas dúvidas e garantir seu sucesso.</p>
+    <a href="mailto:suporte@mercenario.com" class="cta-button">Fale Conosco</a>
+  </section>
+
+  <!-- Seção de registro de usuário -->
+  <section class="registro" id="registro">
+    <h2>Registro de Novos Mercenários</h2>
+    <form action="#" method="post" data-aos="fade-up">
+      <label for="nome">Nome Completo</label><br />
+      <input type="text" id="nome" name="nome" required /><br />
+
+      <label for="email">E-mail</label><br />
+      <input type="email" id="email" name="email" required /><br />
+
+      <label for="senha">Senha</label><br />
+      <input type="password" id="senha" name="senha" required /><br />
+
+      <button type="submit" class="cta-button led">Registrar</button>
+    </form>
+  </section>
+
+  <!-- Seção de avaliações -->
+  <section class="avaliacoes" id="avaliacoes">
+    <h2>Avaliações dos Mercenários</h2>
+    <div class="reviews" data-aos="zoom-in">
+      <div class="review">
+        <p>"Contratar o time do Abel foi a melhor decisão que já tomei. Missão concluída com precisão, silêncio e respeito."</p>
+        <strong>– General M. Kurov</strong>
+      </div>
+      <div class="review">
+        <p>"Equipe altamente qualificada, suporte e treinamentos incríveis. Recomendo para quem busca excelência."</p>
+        <strong>– Capitão Silva</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de CTA (Chamada para Ação) -->
+  <div class="cta-container">
+    <p>Missões, disciplina, honra e dinheiro. Tudo começa aqui.</p>
+    <a href="#" class="cta-button">COMPRAR AGORA</a>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 Mercenário de Sucesso. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="/scripts.js"></script>
+</body>
+</html>
