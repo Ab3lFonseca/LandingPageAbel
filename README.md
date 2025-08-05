@@ -18,3 +18,8 @@ Landing page fictícia desenvolvida para promover treinamentos, missões e o rec
 1. Baixe ou clone este repositório:
    ```bash
    git clone https://github.com/seu-usuario/mercenario-de-sucesso.git
+
+## 👤 Autor
+Abel Fonseca
+💼 Projeto acadêmico 
+📅 Ano: 2025
